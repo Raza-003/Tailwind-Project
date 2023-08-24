@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/a46bad993f.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./images/Chabiwala-Logo (1).png" type="image/x-icon">
+    <script src="./js.js"></script>
+    <title>Lock-Smith</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="main">
+            <div class="main-header max-w-full">
+                <div class="social-num-header bg-blue-950 px-10 max-h-max flex flex-row justify-between gap-x-8">
+                    <div class="social-link-list">
+                        <ul class="inline-flex gap-5">
+                            <li><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></li>
+                            <li><i class="fa-brands fa-twitter" style="color: #ffffff;"></i></li>
+                            <li><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></li>
+                        </ul>
+                    </div>
+                    <div class="contact-link">
+                        <span class="text-white	">Call Us: +996 700 766 289</span>
+                    </div>
+                </div>
+                <div class="menu-header flex justify-between p-10 gap-5">
+                    <div class="header-logo text-xl">
+                        <span class="icon bg-blue-950 p-1 rounded-full"><i class="fa-solid fa-unlock-keyhole"
+                                style="color: #ffffff;"></i></span>
+                        <span class="logo-text font-extrabold ">Lock Smith</span>
+                    </div>
+                    <!-- <div class="header-menu-list ">
+                        <ul class="header-menu flex gap-7">
+                            <li><a class="header-menu-list font-semibold text-blue-950" href=".#home">Home</a></li>
+                            <li><a class="header-menu-list font-semibold text-blue-950" href=".#about">About Us</a></li>
+                            <li><a class="header-menu-list font-semibold text-blue-950" href=".#service">Services</a>
+                            </li>
+                            <li><a class="header-menu-list font-semibold text-blue-950" href=".#faq">Faq</a></li>
+                            <li><a class="header-menu-list font-semibold text-blue-950" href="#">Testomonials</a></li>
+                            <li><a class="header-menu-list font-semibold text-blue-950" href="#">Contact Us</a></li>
+                            <li><button><a
+                                        class="header-menu-list rounded-bl-lg rounded-tr-lg bg-orange-500 font-semibold p-2 text-white"
+                                        href="#">Get Started</a></button></li>
+                        </ul>
+                    </div> -->
+                    <div class="lg:hidden">
+                        <button id="menu-toggle" class="block text-gray-600 hover:text-gray-800 focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+
+                        <div id="responsive-menu" class="hidden">
+                            <div class="header-menu-list">
+                                <ul class="header-menu space-y-2">
+                                    <li><a class="font-semibold text-blue-950" href=".#home">Home</a></li>
+                                    <li><a class="font-semibold text-blue-950" href=".#about">About Us</a></li>
+                                    <li><a class="font-semibold text-blue-950" href=".#service">Services</a></li>
+                                    <li><a class="font-semibold text-blue-950" href=".#faq">Faq</a></li>
+                                    <li><a class="font-semibold text-blue-950" href="#">Testimonials</a></li>
+                                    <li><a class="font-semibold text-blue-950" href="#">Contact Us</a></li>
+                                    <li><a class="rounded-bl-lg rounded-tr-lg bg-orange-500 font-semibold p-2 text-white"
+                                            href="#">Get Started</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden lg:block header-menu-list">
+                        <ul class="header-menu flex gap-7">
+                            <li><a class="font-semibold text-blue-950" href=".#home">Home</a></li>
+                            <li><a class="font-semibold text-blue-950" href=".#about">About Us</a></li>
+                            <li><a class="font-semibold text-blue-950" href=".#service">Services</a></li>
+                            <li><a class="font-semibold text-blue-950" href=".#faq">Faq</a></li>
+                            <li><a class="font-semibold text-blue-950" href="#">Testimonials</a></li>
+                            <li><a class="font-semibold text-blue-950" href="#">Contact Us</a></li>
+                            <li><button><a
+                                        class="rounded-bl-lg rounded-tr-lg bg-orange-500 font-semibold p-2 text-white"
+                                        href="#">Get Started</a></button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const responsiveMenu = document.getElementById('responsive-menu');
+
+        menuToggle.addEventListener('click', () => {
+            responsiveMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- hero secction -->
+    <section id="home" class="section-1">
+        <div class="home-main w-full h-screen bg-no-repeat bg-cover grid grid-cols-2 grid-flow-row gap-3 "
+            style="background-image: url('https://res.cloudinary.com/jerrick/image/upload/c_scale,f_jpg,q_auto/5f58b515aa0f55001ca14347.jpg');">
+            <div class="column-1-opacity h-screen bg-blue-950 opacity-75">
+                <div class="column-1-textarea text-white p-14">
+                    <h1 class="text-6xl font-bold ">The Only LockSmiths<br>You'll Ever Need</h1>
+                    <h4 class="text-xl font-semibold my-6">We Are The Perfect Fit For Your Lock-Out Problem.</h4>
+                    <p class="text-base font-normal my-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Aliquid, impedit veniam expedita nemo
+                        itaque eos similique voluptas. Voluptates labore ad maxime sed hic aperiam adipisci nihil, vel,
+                        totam voluptatibus magnam!</p>
+                    <li class="list-none my-9"><button><a
+                                class="header-menu-list rounded-bl-lg rounded-tr-lg bg-orange-500 font-semibold p-6 text-white"
+                                href="#">CONTACT US</a></button></li>
+                </div>
+            </div>
+            <div class="column-2"></div>
+        </div>
+    </section>
+
+    <!-- about us section -->
+    <section id="about" class="section-2">
+        <div class="about-main max-w-max max-h-max p-12">
+            <div class="grid grid-cols-12 gap-6">
+                <div class="col-span-4 bg-no-repeat bg-contain"
+                    style="height: 450px; width: 100%; background-image: url('https://media.istockphoto.com/id/625905206/photo/male-lockpicker-fixing-door-handle-at-home.jpg?s=612x612&w=0&k=20&c=Y4EAr4fZujLDzU_-inM1eiU5v8OGKh0_Rf3www2PoEc=')">
+                </div>
+                <div class="col-span-8 p-5">
+                    <h1 class="text-5xl font-bold text-black ">Get it open. Get it locked.<br>Get home safely</h1>
+                    <p class="text-base font-semibold my-6 text-blue-900">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Aliquid, impedit veniam expedita nemo
+                        itaque eos similique voluptas. Voluptates labore ad maxime sed hic aperiam adipisci nihil, vel,
+                        totam voluptatibus magnam!</p>
+                    <div class="grid grid-cols-2 grid-flow-col gap-2">
+                        <div class="icon-box-1 shadow-xl max-h-max max-w-max flex flex-row p-6">
+                            <div class="icon-box-1-icon flex items-center ">
+                                <span class="icon bg-blue-950 p-2 text-lg rounded-full"><i
+                                        class="fa-solid fa-user-clock" style="color: #ffffff;"></i></span>
+                            </div>
+                            <div class="icon-box-1-content mx-6">
+                                <h6 class="text-blue-950 text-xl font-semibold">Standby 24 Hours</h6>
+                                <p class="text-blue-900 font-medium">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                    elit.</p>
+                            </div>
+                        </div>
+                        <div class="icon-box-2 shadow-xl max-h-max max-w-max flex flex-row p-6">
+                            <div class="icon-box-2-icon flex items-center ">
+                                <span class="icon bg-blue-950 p-2 text-lg rounded-full"><i class="fa-solid fa-user-lock"
+                                        style="color: #ffffff;"></i></span>
+                            </div>
+                            <div class="icon-box-2-content mx-6">
+                                <h6 class="text-blue-950 text-xl font-semibold">Best Quality Product</h6>
+                                <p class="text-blue-900 font-medium">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                    elit.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <li class="list-none my-9"><button><a
+                                class="header-menu-list rounded-bl-lg rounded-tr-lg bg-orange-500 font-semibold p-6 text-white"
+                                href="#">CONTACT US</a></button></li>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- services section -->
+    <section id="service" class="section-3-1">
+        <div class="service-main w-full h-full bg-no-repeat bg-cover "
+            style="background-image: url('https://timthekeyguy.com/wp-content/uploads/2020/06/Depositphotos_85682064_l-2015.jpg');">
+            <div class="service-main-2 bg-blue-950 opacity-90 p-10">
+                <div class="service-head-text text-center ">
+                    <div class="servi-1 p-7">
+                        <span class="our-service px-28 py-3 bg-blue-300 text-blue-950 font-bold my-5">OUR
+                            SERVICES</span>
+                        <h1 class="service text-4xl font-bold text-white my-6">A professional locksmith you can rely on
+                        </h1>
+                        <p class=" service text-sm font-medium text-white my-3">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Aliquid, impedit veniam expedita nemo<br>
+                            itaque eos similique voluptas. Voluptates labore ad maxime sed hic aperiam adipisci nihil,
+                            vel</p>
+                    </div>
+                    <div class="servi-2 grid lg:grid-row-3 md:grid-row-3 grid-flow-row gap-5 max-h-fit px-24">
+                        <div class="servi-2 grid md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-5">
+                            <div
+                                class="servi-2-col-1 p-8 rounded-bl-lg rounded-tr-lg bg-white font-semibold opacity-100">
+                                <span class="icon p-2 text-5xl "><i class="fa-brands fa-keycdn"
+                                        style="color: #0e264f;"></i></span>
+                                <h6 class="text-blue-950 text-2xl font-black">Electronic Key</h6>
+                                <p class="text-blue-900 font-medium">Lorem ipsum dolor, sit amet<br> consectetur
+                                    adipisicing
+                                    elit.</p>
+                            </div>
+                            <div
+                                class="servi-2-col-2 p-8 rounded-bl-lg rounded-tr-lg bg-blue-300 font-semibold opacity-100">
+                                <span class="icon p-2 text-5xl "><i class="fa-solid fa-key"
+                                        style="color: #0e264f;"></i></span>
+                                <h6 class="text-blue-950 text-2xl font-black">Vehicles Key</h6>
+                                <p class="text-blue-900 font-medium">Lorem ipsum dolor, sit amet<br> consectetur
+                                    adipisicing
+                                    elit.</p>
+                            </div>
+                            <div
+                                class="servi-2-col-3 p-8 rounded-bl-lg rounded-tr-lg bg-white font-semibold opacity-100">
+                                <span class="icon p-2 text-5xl "><i class="fa-solid fa-shield-halved"
+                                        style="color: #0e264f;"></i></span>
+                                <h6 class="text-blue-950 text-2xl font-black">Safe Locks</h6>
+                                <p class="text-blue-900 font-medium">Lorem ipsum dolor, sit amet<br> consectetur
+                                    adipisicing
+                                    elit.</p>
+                            </div>
+                        </div>
+                        <div class="servi-3 grid md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-5 ">
+                            <div
+                                class="servi-3-col-1 p-8 rounded-bl-lg rounded-tr-lg bg-white font-semibold opacity-100">
+                                <span class="icon p-2 text-5xl "><i class="fa-solid fa-anchor"
+                                        style="color: #0e264f;"></i></span>
+                                <h6 class="text-blue-950 text-2xl font-black">Smart Key</h6>
+                                <p class="text-blue-900 font-medium">Lorem ipsum dolor, sit amet<br> consectetur
+                                    adipisicing
+                                    elit.</p>
+                            </div>
+
+                            <div
+                                class="servi-3-col-2 p-8 rounded-bl-lg rounded-tr-lg bg-blue-300 font-semibold opacity-100">
+                                <span class="icon p-2 text-5xl "><i class="fa-solid fa-door-open"
+                                        style="color: #0e264f;"></i></span>
+                                <h6 class="text-blue-950 text-2xl font-black">Security Door</h6>
+                                <p class="text-blue-900 font-medium">Lorem ipsum dolor, sit amet<br> consectetur
+                                    adipisicing
+                                    elit.</p>
+                            </div>
+                            <div
+                                class="servi-3-col-1 p-8 rounded-bl-lg rounded-tr-lg bg-white font-semibold opacity-100">
+                                <span class="icon p-2 text-5xl "><i class="fa-solid fa-dungeon"
+                                        style="color: #0e264f;"></i></span>
+                                <h6 class="text-blue-950 text-2xl font-black">Alarm System</h6>
+                                <p class="text-blue-900 font-medium">Lorem ipsum dolor, sit amet<br> consectetur
+                                    adipisicing
+                                    elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- service section-2-->
+    <section class="section-3-2">
+        <div class="service-2-main max-w-max max-h-max p-10">
+            <div class="grid grid-cols-3 gap-y-10 p-5">
+                <div class="col-span-1 p-2">
+                    <h6 class="sub-head font-black text-lg text-orange-500">WHY CHOOSE US</h6>
+                    <h1 class="text-5xl font-bold text-black ">Dependable, Honest,<br>and Reliable</h1>
+                    <p class="text-base font-semibold my-6 text-blue-900">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Aliquid, impedit veniam expedita nemo
+                        itaque eos similique voluptas. Voluptates labore ad maxime sed hic aperiam adipisci nihil, vel,
+                        totam voluptatibus magnam!</p>
+                    <li class="list-none my-9"><button><a
+                                class="header-menu-list rounded-bl-lg rounded-tr-lg bg-orange-500 font-semibold p-6 text-white"
+                                href="#">CONTACT US</a></button></li>
+                </div>
+                <div class="col-span-2 grid grid-rows-2 gap-10 p-5">
+                    <div class="col1 grid grid-cols-2 gap-2">
+                        <div class="grid-row-1 ">
+                            <div class="icon-box-2-icon flex my-2">
+                                <span class="icon bg-blue-100 p-2  text-lg rounded-full"><i
+                                        class="fa-solid fa-shield-halved" style="color: #0e264f;"></i></span>
+                            </div>
+                            <div class="icon-box-2-content">
+                                <h6 class="text-blue-950 text-xl font-semibold my-1">Relaible Company</h6>
+                                <p class="text-blue-900 font-medium">Lorem ipsum dolor, sit amet <br> consectetur
+                                    adipisicing
+                                    elit.</p>
+                            </div>
+                        </div>
+                        <div class="grid-row-2">
+                            <div class="icon-box-2-icon flex my-2">
+                                <span class="icon bg-blue-100 p-2 text-lg rounded-full"><i class="fa-solid fa-phone"
+                                        style="color: #0e264f;"></i></span>
+                            </div>
+                            <div class="icon-box-2-content">
+                                <h6 class="text-blue-950 text-xl font-semibold my-1">24/7 Services</h6>
+                                <p class="text-blue-900 font-medium">Lorem ipsum dolor, sit amet <br> consectetur
+                                    adipisicing
+                                    elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col2 grid grid-cols-2 gap-2">
+                        <div class="grid-row-1">
+                            <div class="icon-box-2-icon flex my-2">
+                                <span class="icon bg-blue-100 p-2 text-xl rounded-full"><i class="fa-solid fa-award"
+                                        style="color: #0e264f;"></i></span>
+                            </div>
+                            <div class="icon-box-2-content">
+                                <h6 class="text-blue-950 text-xl font-semibold my-1">Professionals</h6>
+                                <p class="text-blue-900 font-medium">Lorem ipsum dolor, sit amet <br> consectetur
+                                    adipisicing
+                                    elit.</p>
+                            </div>
+                        </div>
+                        <div class="grid-row-2">
+                            <div class="icon-box-2-icon flex my-2">
+                                <span class="icon bg-blue-100 p-2 text-xl rounded-full"><i
+                                        class="fa-solid fa-mug-saucer" style="color: #0e264f;"></i></span>
+                            </div>
+                            <div class="icon-box-2-content">
+                                <h6 class="text-blue-950 text-xl font-semibold my-1">Best Offers</h6>
+                                <p class="text-blue-900 font-medium">Lorem ipsum dolor, sit amet <br> consectetur
+                                    adipisicing
+                                    elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- faq section-1 -->
+    <section id="faq" class="section-4-1">
+        <div class="faq-1-main max-w-full h-fit">
+            <div class="back-img w-full h-full bg-no-repeat bg-cover"
+                style="background-image: url('https://elitelockservice.com.au/wp-content/uploads/2021/03/commercial-banner.jpg');">
+                <div class="faq-1-main flex gap-5 bg-black opacity-90 p-10">
+                    <div class="w-3/4 text-white">
+                        <h1 class="service text-4xl font-bold text-white my-4">Delivering the Best Security Solutions
+                            <br> to
+                            Our Clients
+                        </h1>
+                        <p class=" service text-lg font-medium text-white">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Aliquid, impedit veniam expedita<br> nemo
+                            itaque eos similique voluptas. Voluptates labore ad maxime sed hic aperiam <br> adipisci
+                            nihil,
+                            vel</p>
+                    </div>
+                    <div class="w-1/4 text-white text-9xl font-thin my-10"><a
+                            href="https://www.youtube.com/watch?v=mBcLtDHFfO4"><i
+                                class="fa-regular fa-circle-play"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

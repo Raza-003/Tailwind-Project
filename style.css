@@ -3,9 +3,3 @@
     /* font-family: 'Montserrat', sans-serif; */
     scroll-behavior: smooth;
 }
-@media screen and (max-width:1024px) {
-    .column-1-textarea.text-white.p-14 {
-        padding: 2.5rem;
-        
-    }    
-}
